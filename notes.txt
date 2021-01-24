@@ -1,0 +1,11 @@
+
+Step 1. Start kafka zookeeper
+    bin/zookeeper-server-start.sh config/zookeeper.properties
+Step 2. Start kafka server
+    bin/kafka-server-start.sh config/server.properties
+Step 3. Create the topic
+    bin/kafka-topics.sh --create --topic issloc --bootstrap-server localhost:9092
+Step 4. Start issdataproducer
+    python3 issdataproducer.py
+Step 5. Start issdataconsumer and / or issdataplotter
+    python3 issdataconsumer.py
