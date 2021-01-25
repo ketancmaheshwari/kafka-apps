@@ -9,5 +9,5 @@ kafka_server = 'localhost:9092'
 consumer = KafkaConsumer('issloc', bootstrap_servers = kafka_server)
 
 for msg in consumer:
-    time, latitude, longitude = make_tuple(msg.value.decode())
-    print(time,latitude,longitude)
+    longitude, latitude, time = make_tuple(msg.value.decode())
+    print(longitude, latitude, time)
