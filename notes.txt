@@ -9,3 +9,8 @@ Step 4. Start issdataproducer
     python3 issdataproducer.py
 Step 5. Start issdataconsumer and / or issdataplotter
     python3 issdataconsumer.py
+
+Step 6. To run Jupyter:
+    jupyter notebook --no-browser --port=9999
+    
+    To connect: ssh -L 9999:localhost:9999 worker3 #or the IP of node where jupyter is running
